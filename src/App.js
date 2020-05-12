@@ -9,6 +9,7 @@ import "./App.css";
 // import the PostsPage and SearchBar and add them to the App
 import PostsPage from "./components/PostsContainer/PostsPage"
 import SearchBar from "./components/SearchBar/SearchBarContainer"
+import CommentSection from "./components/CommentSection/CommentSectionContainer"
 import data from  "./dummy-data"
 
 const App = () => {
@@ -28,13 +29,15 @@ const App = () => {
       }
     })
   }
-
+ 
   return (
     <div className="App">
       {/* Add imported components here to render them */}
 
       <SearchBar updateSearchTerm={setSearchTerm} />
       <PostsPage posts={filterPosts(posts)}/>
+  
+      
     </div>
   );
 };
